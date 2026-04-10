@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finger Gun DOM Vaporizer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <video id="cam" autoplay playsinline muted></video>
+  <canvas id="fx"></canvas>
+
+  <div id="targets">
+    <div class="target" style="background:#e63946">ALPHA</div>
+    <div class="target" style="background:#f1a208">BETA</div>
+    <div class="target" style="background:#2a9d8f">GAMMA</div>
+    <div class="target" style="background:#457b9d">DELTA</div>
+    <div class="target" style="background:#8338ec">EPSILON</div>
+    <div class="target" style="background:#ff006e">ZETA</div>
+
+    <div class="target" style="background:#fb5607">ETA</div>
+    <div class="target" style="background:#3a86ff">THETA</div>
+    <div class="target" style="background:#06a77d">IOTA</div>
+    <div class="target" style="background:#d62828">KAPPA</div>
+    <div class="target" style="background:#f77f00">LAMBDA</div>
+    <div class="target" style="background:#7209b7">MU</div>
+
+    <div class="target" style="background:#118ab2">NU</div>
+    <div class="target" style="background:#ef476f">XI</div>
+    <div class="target" style="background:#06d6a0">OMICRON</div>
+    <div class="target" style="background:#ffd166">PI</div>
+    <div class="target" style="background:#073b4c">RHO</div>
+    <div class="target" style="background:#8d99ae">SIGMA</div>
+
+    <div class="target" style="background:#bc4749">TAU</div>
+    <div class="target" style="background:#6a994e">UPSILON</div>
+    <div class="target" style="background:#a7c957">PHI</div>
+    <div class="target" style="background:#386641">CHI</div>
+    <div class="target" style="background:#dda15e">PSI</div>
+    <div class="target" style="background:#bc6c25">OMEGA</div>
+  </div>
+
+  <div id="hud">Loading model…</div>
+
+  <div id="reload" hidden>
+    <div>ALL TARGETS DOWN</div>
+    <button id="reloadBtn">RELOAD</button>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/+esm",
+      "matter-js": "https://cdn.jsdelivr.net/npm/matter-js@0.20.0/+esm",
+      "html2canvas": "https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/+esm"
+    }
+  }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
